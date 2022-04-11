@@ -139,12 +139,12 @@ ul {
 
 .form-control {
     height: 50px;
-    color: #ff8c00;
+    color: #1e344c;
     border: 1px solid #ebebeb;
     background-color: transparent;
     border-radius: 0;
     font-size: 16px;
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
     width: 100%;
 }
 
@@ -2674,7 +2674,7 @@ We are Area Style
 }
 
 .we-area-form {
-    text-align: center;
+    text-align: left;
     -webkit-box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
     box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
     background-color: #ffffff;
