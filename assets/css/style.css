@@ -6543,6 +6543,17 @@ Main Contact Area Style
     margin-top: 20px;
 }
 
+.default-btn.disabled,
+.default-btn:disabled {
+    opacity: .1;
+}
+
+.default-btn.disabled:hover,
+.default-btn:disabled:hover {
+    opacity: .1;
+    background-color: #000000;
+}
+
 .main-contact-area .contact-wrap .contact-form .hidden {
     display: none;
 }

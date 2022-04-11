@@ -430,11 +430,26 @@
                                     </div>
 
                                     <div class="col-lg-12 col-md-12">
-                                        <input type="submit" value="Send Message" class="default-btn" />
-                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                        <input type="submit" value="Send Message" class="default-btn" id="msgSubmit" disabled/>
+                                        <!-- <div id="msgSubmit" class="h3 text-center hidden"></div> -->
                                         <div class="clearfix"></div>
                                         <div data-netlify-recaptcha="true" style="padding-top: 20px;"></div>
                                     </div>
+
+                                    <script>
+                                        function unHideButton() {
+                                            if (grecaptcha.getResponse().length > 0) {
+                                                document.getElementById('msgSubmit').disabled = false
+                                            }
+                                        }
+                                        document.addEventListener("DOMContentLoaded", () => {
+                                            if (typeof grecaptcha === "object") {
+                                                document.querySelector('.g-recaptcha').dataset.callback = "unHideButton"
+                                            } else {
+                                                console.log("Unable to add `data-callback` to grecaptcha as it doesn't exist.");
+                                            }
+                                        });
+                                    </script>
 
                                 </div>
                             </form>
